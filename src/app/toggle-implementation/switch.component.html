@@ -11,11 +11,11 @@
 			<mat-spinner [ngClass]="spinnerClass" *ngIf="showProgress" color="primary">
 			</mat-spinner>
 
-		      	<span [@slideOutOut]  *ngIf="!isShowLoader && !isChecked" class="progress-text">{{showText}}</span>
-        	<span [@slideInOut]  *ngIf="!isShowLoader && isChecked" class="progress-text">{{showText}}</span>
+		      	<span [@slideInOut]  *ngIf="!isShowLoader && !isChecked" class="progress-text">{{showText}}</span>
+        	<span [@slideOutOut]  *ngIf="!isShowLoader && isChecked" class="progress-text">{{showText}}</span>
 
-			<span [@slideOutOut]  *ngIf="isShowLoader && !isChecked" class="progress-text">Please Wait...</span>      
-      	<span [@slideInOut]  *ngIf="isShowLoader && isChecked" class="progress-text">Please Wait...</span>
+			<span [@slideInOut]  *ngIf="isShowLoader && !isOff" class="progress-text">Please Wait...</span>      
+      	<span [@slideOutOut]  *ngIf="isShowLoader && isOff" class="progress-text">Please Wait...</span>
 		</div>
 
 	</div>

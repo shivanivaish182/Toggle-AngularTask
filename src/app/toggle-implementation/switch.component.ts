@@ -20,10 +20,20 @@ export class SwitchComponent implements OnInit {
 
   ngOnInit() {
    this.isOff= !this.isChecked;
-   if(this.isOff)
-    this.onClick1();
-  else if(!this.isOff)
-    this.onClick();
+   if(this.isOff){
+    this.colorClass = "warn";
+    this.spinnerClass = "mat-off-progress";
+    this.showTextAndLoader("Devices Off");        
+    this.isOff=false;      
+    this.isChecked = true; 
+   }
+  else if(!this.isOff){
+    this.colorClass = "primary";
+    this.spinnerClass = "mat-on-progress";
+    this.showTextAndLoader("Devices On");          
+    this.isOff=true;   
+    this.isChecked = false;      
+  }
   }
 
   showTextAndLoader(showText: string) {
@@ -33,13 +43,12 @@ export class SwitchComponent implements OnInit {
       this.isShowLoader = false;
     }, 1500);
   }
-
   onClick() {
     this.showProgress = true;
     this.colorClass = "progress";
     this.isShowLoader = true;
     this.showText = "Please Wait...";
-   
+
       this.colorClass = "primary";
       this.spinnerClass = "mat-on-progress";
       this.showTextAndLoader("Devices On");

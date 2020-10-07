@@ -76,16 +76,6 @@ export const AngularAnimation = [
       animate("0ms ease-in", style({ transform: "translateY(0%)", opacity: 0 }))
     ])
   ]),
-  //  trigger("slideOutOut", [
-  //   transition(":enter", [
-  //     style({ opacity: 0, transform: 'translateY(50px)' }),
-	// 	animate('600ms', style({ opacity: 1, transform: 'translateY(0)' })),
-  //   ]),
-  //   transition(":leave", [
-  //     animate('500ms', style({ opacity: 0, transform: 'translateY(50px)' })),
-  //   ])
-  // ]),
-
   trigger("slideView", [
     state("true", style({ transform: "translateY(100%)", opacity: 0 })),
     state("false", style({ transform: "translateY(0)", opacity: 1 })),
