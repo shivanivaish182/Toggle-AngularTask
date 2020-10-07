@@ -1,0 +1,139 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+$buttonColorRed: rgb(225, 65, 62);
+$buttonColorGreen:rgb(27, 198, 101);
+$backColorRed:rgb(255, 222, 222);
+$backColorGreen:rgb(222, 252, 235);
+$backProgress:rgb(216, 221, 255);
+
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+.mat-slide-toggle-bar{
+  width: 110px !important;
+    height: 65px !important;
+    border-radius: 36px !important;
+}
+
+.mat-slide-toggle-thumb {
+    height: 55px !important;
+    width: 55px !important;
+    border-radius: 50% !important;
+}
+
+.mat-slide-toggle {
+  .mat-slide-toggle-thumb-container{
+  top: 5px !important;
+  left: 4px !important;
+}
+}
+
+.mat-slide-toggle.mat-checked {
+  .mat-slide-toggle-thumb-container{
+  left:35px !important;
+}
+}
+.mat-slide-toggle .mat-slide-toggle-ripple{
+  display:none;
+}
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+    background-color: white !important;
+}
+.mat-spinner{
+  box-shadow: 2px 3px 5px 3px #D0D3D0 ;
+  border-radius:50%;
+}
+.mat-slide-toggle.mat-primary.mat-checked {
+  .mat-slide-toggle-bar {
+    background-color:$buttonColorGreen !important;  
+    box-shadow: 2px 3px 5px 3px #D0D3D0 ; 
+}
+}
+.mat-slide-toggle.mat-primary {
+  .mat-slide-toggle-bar {
+    background-color: $buttonColorRed !important;
+    box-shadow: 2px 3px 5px 3px #D0D3D0 ;
+}
+}
+.progress-text{
+    position: absolute;
+    width: 220px;
+    top: -20px;
+    left:120px;
+    font-weight: 700;
+    font-size: 32px;
+    color:rgb(89, 70, 68) !important;
+    font-family: 'Poppins', sans-serif;
+}
+.progress-wait-text{
+  left:55px;
+}
+.warn{
+    background-color: $backColorRed!important;
+}
+.primary{
+    background-color:$backColorGreen !important;
+}
+.progress{
+  background-color:$backProgress !important;
+}
+.vertical-center{
+  margin-left:0 !important;
+  left:40%;
+}
+.mat-spinner,
+.mat-progress-spinner svg{
+  width:65px !important;
+  height:65px !important;
+}
+.mat-progress-spinner {
+    position: absolute !important;
+    top: -20px;
+    left:15px;
+    z-index: 999;
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: rgb(98, 118, 243);
+}
+.mat-progress-spinner circle{
+  fill:white !important;
+}
+.mat-off-progress{
+	top: -21px !important;
+  left: 10px !important;
+}
+
+.mat-on-spinner{
+	position: absolute !important;
+    top: -21px;
+    left: 1px;
+    z-index: 999;
+}
+
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin-left: 38%;
+  position: absolute;
+  top: 50%;
+  //-ms-transform: translateY(-50%);
+  //transform: translateY(-50%);
+}
+
+.progress-text {
+ margin: 10px;
+ color: black
+}
+/**  Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
